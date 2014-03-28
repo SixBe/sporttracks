@@ -162,6 +162,7 @@
 				2B2718F218E5C5FC00ED2650 /* Sources */,
 				2B2718F318E5C5FC00ED2650 /* Frameworks */,
 				2B2718F418E5C5FC00ED2650 /* Resources */,
+				2B27192E18E5C60A00ED2650 /* Icon Watermarking */,
 			);
 			buildRules = (
 			);
@@ -244,6 +245,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B27192E18E5C60A00ED2650 /* Icon Watermarking */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Icon Watermarking";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Scripts/iconVersioning.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B2718F218E5C5FC00ED2650 /* Sources */ = {
