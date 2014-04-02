@@ -38,7 +38,6 @@
         }
         
         if (propertyKey) { // Need to do something for dates...
-            NSLog(@"Setting value %@ for key %@", value, propertyKey);
             [self setValue:value forKey:propertyKey];
         }
     }

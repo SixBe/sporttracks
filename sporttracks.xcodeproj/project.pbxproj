@@ -29,6 +29,24 @@
 		2B7EB1B018EB059B00C5887D /* SBWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1AF18EB059B00C5887D /* SBWorkout.m */; };
 		2B7EB1B318EB117000C5887D /* SBWorkoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */; };
 		2B7EB1B918EBF6CE00C5887D /* NSDate+RFCAndISO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */; };
+		2B7EB1CD18EC08DF00C5887D /* Cycling.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1BB18EC08DF00C5887D /* Cycling.png */; };
+		2B7EB1CE18EC08DF00C5887D /* Cycling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1BC18EC08DF00C5887D /* Cycling@2x.png */; };
+		2B7EB1CF18EC08DF00C5887D /* Gym.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1BD18EC08DF00C5887D /* Gym.png */; };
+		2B7EB1D018EC08DF00C5887D /* Gym@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1BE18EC08DF00C5887D /* Gym@2x.png */; };
+		2B7EB1D118EC08DF00C5887D /* Other.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1BF18EC08DF00C5887D /* Other.png */; };
+		2B7EB1D218EC08DF00C5887D /* Other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C018EC08DF00C5887D /* Other@2x.png */; };
+		2B7EB1D318EC08DF00C5887D /* Rowing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C118EC08DF00C5887D /* Rowing.png */; };
+		2B7EB1D418EC08DF00C5887D /* Rowing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C218EC08DF00C5887D /* Rowing@2x.png */; };
+		2B7EB1D518EC08DF00C5887D /* Running.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C318EC08DF00C5887D /* Running.png */; };
+		2B7EB1D618EC08DF00C5887D /* Running@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C418EC08DF00C5887D /* Running@2x.png */; };
+		2B7EB1D718EC08DF00C5887D /* Skating.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C518EC08DF00C5887D /* Skating.png */; };
+		2B7EB1D818EC08DF00C5887D /* Skating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C618EC08DF00C5887D /* Skating@2x.png */; };
+		2B7EB1D918EC08DF00C5887D /* Skiing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C718EC08DF00C5887D /* Skiing.png */; };
+		2B7EB1DA18EC08DF00C5887D /* Skiing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C818EC08DF00C5887D /* Skiing@2x.png */; };
+		2B7EB1DB18EC08DF00C5887D /* Swimming.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1C918EC08DF00C5887D /* Swimming.png */; };
+		2B7EB1DC18EC08DF00C5887D /* Swimming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CA18EC08DF00C5887D /* Swimming@2x.png */; };
+		2B7EB1DD18EC08DF00C5887D /* Walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CB18EC08DF00C5887D /* Walking.png */; };
+		2B7EB1DE18EC08DF00C5887D /* Walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CC18EC08DF00C5887D /* Walking@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +95,24 @@
 		2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkoutTableViewController.m; sourceTree = "<group>"; };
 		2B7EB1B718EBF6CE00C5887D /* NSDate+RFCAndISO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFCAndISO.h"; sourceTree = "<group>"; };
 		2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFCAndISO.m"; sourceTree = "<group>"; };
+		2B7EB1BB18EC08DF00C5887D /* Cycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cycling.png; sourceTree = "<group>"; };
+		2B7EB1BC18EC08DF00C5887D /* Cycling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cycling@2x.png"; sourceTree = "<group>"; };
+		2B7EB1BD18EC08DF00C5887D /* Gym.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gym.png; sourceTree = "<group>"; };
+		2B7EB1BE18EC08DF00C5887D /* Gym@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gym@2x.png"; sourceTree = "<group>"; };
+		2B7EB1BF18EC08DF00C5887D /* Other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Other.png; sourceTree = "<group>"; };
+		2B7EB1C018EC08DF00C5887D /* Other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Other@2x.png"; sourceTree = "<group>"; };
+		2B7EB1C118EC08DF00C5887D /* Rowing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rowing.png; sourceTree = "<group>"; };
+		2B7EB1C218EC08DF00C5887D /* Rowing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rowing@2x.png"; sourceTree = "<group>"; };
+		2B7EB1C318EC08DF00C5887D /* Running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Running.png; sourceTree = "<group>"; };
+		2B7EB1C418EC08DF00C5887D /* Running@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Running@2x.png"; sourceTree = "<group>"; };
+		2B7EB1C518EC08DF00C5887D /* Skating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skating.png; sourceTree = "<group>"; };
+		2B7EB1C618EC08DF00C5887D /* Skating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skating@2x.png"; sourceTree = "<group>"; };
+		2B7EB1C718EC08DF00C5887D /* Skiing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skiing.png; sourceTree = "<group>"; };
+		2B7EB1C818EC08DF00C5887D /* Skiing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skiing@2x.png"; sourceTree = "<group>"; };
+		2B7EB1C918EC08DF00C5887D /* Swimming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swimming.png; sourceTree = "<group>"; };
+		2B7EB1CA18EC08DF00C5887D /* Swimming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swimming@2x.png"; sourceTree = "<group>"; };
+		2B7EB1CB18EC08DF00C5887D /* Walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walking.png; sourceTree = "<group>"; };
+		2B7EB1CC18EC08DF00C5887D /* Walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Walking@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,15 +177,16 @@
 				2B27190B18E5C5FC00ED2650 /* Main.storyboard */,
 				2B27190E18E5C5FC00ED2650 /* SBViewController.h */,
 				2B27190F18E5C5FC00ED2650 /* SBViewController.m */,
-				2B7EB19818E9ACB200C5887D /* Model */,
-				2B27191118E5C5FC00ED2650 /* Images.xcassets */,
-				2B27190018E5C5FC00ED2650 /* Supporting Files */,
 				2B7EB19C18E9CB0700C5887D /* SBHistoryTableViewController.h */,
 				2B7EB19D18E9CB0700C5887D /* SBHistoryTableViewController.m */,
 				2B7EB1B118EB117000C5887D /* SBWorkoutTableViewController.h */,
 				2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */,
 				2B7EB1B718EBF6CE00C5887D /* NSDate+RFCAndISO.h */,
 				2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */,
+				2B7EB19818E9ACB200C5887D /* Model */,
+				2B27191118E5C5FC00ED2650 /* Images.xcassets */,
+				2B7EB1BA18EC08DF00C5887D /* Resources */,
+				2B27190018E5C5FC00ED2650 /* Supporting Files */,
 			);
 			path = sporttracks;
 			sourceTree = "<group>";
@@ -198,6 +235,31 @@
 				2B7EB1AF18EB059B00C5887D /* SBWorkout.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2B7EB1BA18EC08DF00C5887D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B7EB1BB18EC08DF00C5887D /* Cycling.png */,
+				2B7EB1BC18EC08DF00C5887D /* Cycling@2x.png */,
+				2B7EB1BD18EC08DF00C5887D /* Gym.png */,
+				2B7EB1BE18EC08DF00C5887D /* Gym@2x.png */,
+				2B7EB1BF18EC08DF00C5887D /* Other.png */,
+				2B7EB1C018EC08DF00C5887D /* Other@2x.png */,
+				2B7EB1C118EC08DF00C5887D /* Rowing.png */,
+				2B7EB1C218EC08DF00C5887D /* Rowing@2x.png */,
+				2B7EB1C318EC08DF00C5887D /* Running.png */,
+				2B7EB1C418EC08DF00C5887D /* Running@2x.png */,
+				2B7EB1C518EC08DF00C5887D /* Skating.png */,
+				2B7EB1C618EC08DF00C5887D /* Skating@2x.png */,
+				2B7EB1C718EC08DF00C5887D /* Skiing.png */,
+				2B7EB1C818EC08DF00C5887D /* Skiing@2x.png */,
+				2B7EB1C918EC08DF00C5887D /* Swimming.png */,
+				2B7EB1CA18EC08DF00C5887D /* Swimming@2x.png */,
+				2B7EB1CB18EC08DF00C5887D /* Walking.png */,
+				2B7EB1CC18EC08DF00C5887D /* Walking@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +340,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7EB1D018EC08DF00C5887D /* Gym@2x.png in Resources */,
+				2B7EB1CE18EC08DF00C5887D /* Cycling@2x.png in Resources */,
+				2B7EB1D918EC08DF00C5887D /* Skiing.png in Resources */,
+				2B7EB1D418EC08DF00C5887D /* Rowing@2x.png in Resources */,
 				2B27191218E5C5FC00ED2650 /* Images.xcassets in Resources */,
+				2B7EB1D618EC08DF00C5887D /* Running@2x.png in Resources */,
+				2B7EB1DE18EC08DF00C5887D /* Walking@2x.png in Resources */,
+				2B7EB1D318EC08DF00C5887D /* Rowing.png in Resources */,
+				2B7EB1DD18EC08DF00C5887D /* Walking.png in Resources */,
+				2B7EB1D218EC08DF00C5887D /* Other@2x.png in Resources */,
 				2B27190418E5C5FC00ED2650 /* InfoPlist.strings in Resources */,
+				2B7EB1CF18EC08DF00C5887D /* Gym.png in Resources */,
+				2B7EB1DC18EC08DF00C5887D /* Swimming@2x.png in Resources */,
 				2B27190D18E5C5FC00ED2650 /* Main.storyboard in Resources */,
+				2B7EB1D118EC08DF00C5887D /* Other.png in Resources */,
+				2B7EB1DA18EC08DF00C5887D /* Skiing@2x.png in Resources */,
+				2B7EB1CD18EC08DF00C5887D /* Cycling.png in Resources */,
+				2B7EB1DB18EC08DF00C5887D /* Swimming.png in Resources */,
+				2B7EB1D518EC08DF00C5887D /* Running.png in Resources */,
+				2B7EB1D718EC08DF00C5887D /* Skating.png in Resources */,
+				2B7EB1D818EC08DF00C5887D /* Skating@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

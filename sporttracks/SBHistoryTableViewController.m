@@ -64,8 +64,8 @@
     
     // Configure the cell...
     SBWorkoutSummary *workout = [self.workouts objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %3.2fkm %3.2fs", workout.name, [workout.distance floatValue] / 1000, [workout.duration floatValue]]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", workout.startTime]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@ %@", workout.name, [workout displayValueForKey:@"distance"], [workout displayValueForKey:@"duration"]]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", [workout displayValueForKey:@"startTime"]]];
     return cell;
 }
 

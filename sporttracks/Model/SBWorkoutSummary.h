@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSNumber *distance;
 @property (nonatomic, strong) NSNumber *duration;
 @property (nonatomic, strong) NSNumber *userId;
+
+- (NSString *)displayValueForKey:(NSString *)key;
 @end
