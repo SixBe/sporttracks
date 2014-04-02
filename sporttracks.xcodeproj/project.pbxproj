@@ -21,6 +21,14 @@
 		2B27191B18E5C5FD00ED2650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2718FD18E5C5FC00ED2650 /* UIKit.framework */; };
 		2B27192318E5C5FD00ED2650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B27192118E5C5FD00ED2650 /* InfoPlist.strings */; };
 		2B27192518E5C5FD00ED2650 /* sporttracksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B27192418E5C5FD00ED2650 /* sporttracksTests.m */; };
+		2B7EB19B18E9AD0900C5887D /* SBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB19A18E9AD0900C5887D /* SBUser.m */; };
+		2B7EB19F18E9CB0700C5887D /* SBHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB19D18E9CB0700C5887D /* SBHistoryTableViewController.m */; };
+		2B7EB1A318E9D2D500C5887D /* SBAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1A218E9D2D500C5887D /* SBAPIManager.m */; };
+		2B7EB1A618E9F4EC00C5887D /* SBWorkoutSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1A518E9F4EC00C5887D /* SBWorkoutSummary.m */; };
+		2B7EB1A918E9F68400C5887D /* SBBaseModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1A818E9F68400C5887D /* SBBaseModelObject.m */; };
+		2B7EB1B018EB059B00C5887D /* SBWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1AF18EB059B00C5887D /* SBWorkout.m */; };
+		2B7EB1B318EB117000C5887D /* SBWorkoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */; };
+		2B7EB1B918EBF6CE00C5887D /* NSDate+RFCAndISO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,22 @@
 		2B27192018E5C5FD00ED2650 /* sporttracksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sporttracksTests-Info.plist"; sourceTree = "<group>"; };
 		2B27192218E5C5FD00ED2650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B27192418E5C5FD00ED2650 /* sporttracksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sporttracksTests.m; sourceTree = "<group>"; };
+		2B7EB19918E9AD0900C5887D /* SBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBUser.h; sourceTree = "<group>"; };
+		2B7EB19A18E9AD0900C5887D /* SBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBUser.m; sourceTree = "<group>"; };
+		2B7EB19C18E9CB0700C5887D /* SBHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHistoryTableViewController.h; sourceTree = "<group>"; };
+		2B7EB19D18E9CB0700C5887D /* SBHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHistoryTableViewController.m; sourceTree = "<group>"; };
+		2B7EB1A118E9D2D500C5887D /* SBAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAPIManager.h; sourceTree = "<group>"; };
+		2B7EB1A218E9D2D500C5887D /* SBAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAPIManager.m; sourceTree = "<group>"; };
+		2B7EB1A418E9F4EC00C5887D /* SBWorkoutSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWorkoutSummary.h; sourceTree = "<group>"; };
+		2B7EB1A518E9F4EC00C5887D /* SBWorkoutSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkoutSummary.m; sourceTree = "<group>"; };
+		2B7EB1A718E9F68400C5887D /* SBBaseModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBaseModelObject.h; sourceTree = "<group>"; };
+		2B7EB1A818E9F68400C5887D /* SBBaseModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBBaseModelObject.m; sourceTree = "<group>"; };
+		2B7EB1AE18EB059B00C5887D /* SBWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWorkout.h; sourceTree = "<group>"; };
+		2B7EB1AF18EB059B00C5887D /* SBWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkout.m; sourceTree = "<group>"; };
+		2B7EB1B118EB117000C5887D /* SBWorkoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBWorkoutTableViewController.h; sourceTree = "<group>"; };
+		2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWorkoutTableViewController.m; sourceTree = "<group>"; };
+		2B7EB1B718EBF6CE00C5887D /* NSDate+RFCAndISO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFCAndISO.h"; sourceTree = "<group>"; };
+		2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFCAndISO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +141,15 @@
 				2B27190B18E5C5FC00ED2650 /* Main.storyboard */,
 				2B27190E18E5C5FC00ED2650 /* SBViewController.h */,
 				2B27190F18E5C5FC00ED2650 /* SBViewController.m */,
+				2B7EB19818E9ACB200C5887D /* Model */,
 				2B27191118E5C5FC00ED2650 /* Images.xcassets */,
 				2B27190018E5C5FC00ED2650 /* Supporting Files */,
+				2B7EB19C18E9CB0700C5887D /* SBHistoryTableViewController.h */,
+				2B7EB19D18E9CB0700C5887D /* SBHistoryTableViewController.m */,
+				2B7EB1B118EB117000C5887D /* SBWorkoutTableViewController.h */,
+				2B7EB1B218EB117000C5887D /* SBWorkoutTableViewController.m */,
+				2B7EB1B718EBF6CE00C5887D /* NSDate+RFCAndISO.h */,
+				2B7EB1B818EBF6CE00C5887D /* NSDate+RFCAndISO.m */,
 			);
 			path = sporttracks;
 			sourceTree = "<group>";
@@ -150,6 +181,23 @@
 				2B27192118E5C5FD00ED2650 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B7EB19818E9ACB200C5887D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B7EB19918E9AD0900C5887D /* SBUser.h */,
+				2B7EB19A18E9AD0900C5887D /* SBUser.m */,
+				2B7EB1A118E9D2D500C5887D /* SBAPIManager.h */,
+				2B7EB1A218E9D2D500C5887D /* SBAPIManager.m */,
+				2B7EB1A718E9F68400C5887D /* SBBaseModelObject.h */,
+				2B7EB1A818E9F68400C5887D /* SBBaseModelObject.m */,
+				2B7EB1A418E9F4EC00C5887D /* SBWorkoutSummary.h */,
+				2B7EB1A518E9F4EC00C5887D /* SBWorkoutSummary.m */,
+				2B7EB1AE18EB059B00C5887D /* SBWorkout.h */,
+				2B7EB1AF18EB059B00C5887D /* SBWorkout.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +317,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B27190618E5C5FC00ED2650 /* main.m in Sources */,
+				2B7EB1A618E9F4EC00C5887D /* SBWorkoutSummary.m in Sources */,
 				2B27191018E5C5FC00ED2650 /* SBViewController.m in Sources */,
 				2B27190A18E5C5FC00ED2650 /* SBAppDelegate.m in Sources */,
+				2B7EB1A318E9D2D500C5887D /* SBAPIManager.m in Sources */,
+				2B7EB19F18E9CB0700C5887D /* SBHistoryTableViewController.m in Sources */,
+				2B7EB1B318EB117000C5887D /* SBWorkoutTableViewController.m in Sources */,
+				2B7EB1B918EBF6CE00C5887D /* NSDate+RFCAndISO.m in Sources */,
+				2B7EB1A918E9F68400C5887D /* SBBaseModelObject.m in Sources */,
+				2B7EB19B18E9AD0900C5887D /* SBUser.m in Sources */,
+				2B7EB1B018EB059B00C5887D /* SBWorkout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +531,7 @@
 				2B27192A18E5C5FD00ED2650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B27192B18E5C5FD00ED2650 /* Build configuration list for PBXNativeTarget "sporttracksTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +540,7 @@
 				2B27192D18E5C5FD00ED2650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
