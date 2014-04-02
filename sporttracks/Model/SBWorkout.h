@@ -47,6 +47,4 @@
 @property (nonatomic, strong) NSArray *heartRates;
 
 - (NSArray *)displayProperties;
-- (NSString *)displayNameForKey:(NSString *)key;
-- (NSString *)displayValueForKey:(NSString *)key;
 @end

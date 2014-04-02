@@ -47,6 +47,7 @@
 		2B7EB1DC18EC08DF00C5887D /* Swimming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CA18EC08DF00C5887D /* Swimming@2x.png */; };
 		2B7EB1DD18EC08DF00C5887D /* Walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CB18EC08DF00C5887D /* Walking.png */; };
 		2B7EB1DE18EC08DF00C5887D /* Walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EB1CC18EC08DF00C5887D /* Walking@2x.png */; };
+		2BC9554A18EC90F00024136D /* SBEditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9554918EC90F00024136D /* SBEditableTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		2B7EB1CA18EC08DF00C5887D /* Swimming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swimming@2x.png"; sourceTree = "<group>"; };
 		2B7EB1CB18EC08DF00C5887D /* Walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walking.png; sourceTree = "<group>"; };
 		2B7EB1CC18EC08DF00C5887D /* Walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Walking@2x.png"; sourceTree = "<group>"; };
+		2BC9554818EC90F00024136D /* SBEditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBEditableTableViewCell.h; sourceTree = "<group>"; };
+		2BC9554918EC90F00024136D /* SBEditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBEditableTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				2B27191118E5C5FC00ED2650 /* Images.xcassets */,
 				2B7EB1BA18EC08DF00C5887D /* Resources */,
 				2B27190018E5C5FC00ED2650 /* Supporting Files */,
+				2BC9554818EC90F00024136D /* SBEditableTableViewCell.h */,
+				2BC9554918EC90F00024136D /* SBEditableTableViewCell.m */,
 			);
 			path = sporttracks;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				2B27190A18E5C5FC00ED2650 /* SBAppDelegate.m in Sources */,
 				2B7EB1A318E9D2D500C5887D /* SBAPIManager.m in Sources */,
 				2B7EB19F18E9CB0700C5887D /* SBHistoryTableViewController.m in Sources */,
+				2BC9554A18EC90F00024136D /* SBEditableTableViewCell.m in Sources */,
 				2B7EB1B318EB117000C5887D /* SBWorkoutTableViewController.m in Sources */,
 				2B7EB1B918EBF6CE00C5887D /* NSDate+RFCAndISO.m in Sources */,
 				2B7EB1A918E9F68400C5887D /* SBBaseModelObject.m in Sources */,

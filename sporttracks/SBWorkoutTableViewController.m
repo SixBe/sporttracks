@@ -26,10 +26,11 @@
 
 
 #import "SBWorkoutTableViewController.h"
+#import "SBEditableTableViewCell.h"
 #import "SBAPIManager.h"
 #import "SBWorkout.h"
 
-@interface SBWorkoutTableViewController ()
+@interface SBWorkoutTableViewController () <SBEditableTableViewCellDelegate>
 @property (nonatomic, strong) SBWorkout *workout;
 @end
 
@@ -63,6 +64,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.navigationItem setRightBarButtonItem:self.editButtonItem animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,7 +77,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self triggerRefresh];
+    
+    if (self.workout.name == nil) {
+        [self triggerRefresh];
+    }
 }
 
 #pragma mark - Table view data source
@@ -161,4 +166,18 @@
         }
     }];
 }
+
+- (void)editableCell:(SBEditableTableViewCell *)cell didEndEditingText:(NSString *)oldText newText:(NSString *)newText
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSString *key = [[self.workout displayProperties] objectAtIndex:indexPath.row];
+    
+    if (![oldText isEqualToString:newText]) {
+        // Process newText to remove all units
+        NSString *unitString = [self.workout displayUnitForKey:key];
+        [newText stringByReplacingOccurrencesOfString:unitString withString:@""];
+        [self.workout setValue:newText forKey:key];
+    }
+}
+
 @end

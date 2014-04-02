@@ -37,4 +37,7 @@
 - (void)setupWithJSON:(NSDictionary *)JSONDictionary;
 
 - (UIImage *)imageForActivityType:(NSString *)type;
+- (NSString *)displayNameForKey:(NSString *)key;
+- (NSString *)displayValueForKey:(NSString *)key;
+- (NSString *)displayUnitForKey:(NSString *)key;
 @end
