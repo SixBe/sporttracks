@@ -58,11 +58,9 @@ static NSDateFormatter *__rfc1123DateFormatter = nil;
         __iso8601DateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
         
         __iso8601Formats = @[
-                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ", // 2014-04-02T13:12:43Z (UTC Time Zone Name)
-                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZZZ", // 2014-04-02T13:12:43+02:00 (Time Zone Offset)
-                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ", // 2014-04-02T13:12:43+0200 (Time Zone Offset)
-                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ssx", // 2014-04-02T13:12:43+02 (Time Zone Offset)
-                             ];
+                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ", // 2014-04-02T13:12:43Z or 2014-04-02T13:12:43+02:00 or 2014-04-02T13:12:43+0200 or 2014-04-02T13:12:43+02
+                             @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSSZ" // 2014-04-02T13:12:43.123Z or 2014-04-02T13:12:43.123+02:00 or 2014-04-02T13:12:43.123+0200 or 2014-04-02T13:12:43.123+02
+                            ];
 
     });
     

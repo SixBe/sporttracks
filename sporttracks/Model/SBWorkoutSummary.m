@@ -40,13 +40,11 @@
         return [__formatter stringFromDate:(NSDate *)[self valueForKey:key]];
     }
     else if ([key isEqualToString:@"duration"] || [key isEqualToString:@"clockDuration"]) {
-        // Format using time formatter
         float seconds = [(NSNumber *)[self valueForKey:key] floatValue];
         float hours = floorf(seconds / 3600.f);
         float minutes = floorf((seconds - hours * 3600) / 60.f);
         seconds = seconds - 60.f * minutes - hours * 3600.f;
         return [NSString stringWithFormat:@"%.0f:%02.0f:%02.0f", hours, minutes, seconds];
-        
     } else if ([key isEqualToString:@"distance"]) {
         // Format m to km
         return [NSString stringWithFormat:@"%3.2fkm", [(NSNumber *)[self valueForKey:key] floatValue] / 1000];

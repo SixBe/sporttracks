@@ -42,4 +42,13 @@
         }
     }
 }
+
+- (UIImage *)imageForActivityType:(NSString *)type
+{
+    NSString *typeImageName = nil;
+    NSArray *stringComponents = [type componentsSeparatedByString:@":"];
+    typeImageName = [stringComponents firstObject];
+    return [UIImage imageNamed:typeImageName];
+}
+
 @end
