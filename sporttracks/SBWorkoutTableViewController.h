@@ -27,6 +27,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SBWorkout;
 @interface SBWorkoutTableViewController : UITableViewController
-@property (nonatomic, strong) NSString *workoutId;
+@property (nonatomic, strong) SBWorkout *workout;
 @end

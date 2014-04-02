@@ -35,6 +35,7 @@
 
 - (NSString *)mapJSONKeyToPropertyKey:(NSString *)JSONKey;
 - (void)setupWithJSON:(NSDictionary *)JSONDictionary;
+- (NSDictionary *)JSONDataToPost;
 
 - (UIImage *)imageForActivityType:(NSString *)type;
 - (NSString *)displayNameForKey:(NSString *)key;

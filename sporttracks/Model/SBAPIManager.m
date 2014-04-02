@@ -263,7 +263,7 @@ static NSString * const ks_UserDefaultsExpiryDateKey = @"ks_UserDefaultsExpiryDa
 }
 
 
-- (void)retrieveWorkoutHistoryWithCompletionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock
+- (void)GETWorkoutHistoryWithCompletionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock
 {
     NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"access_token"];
     if (!accessToken) {
@@ -306,7 +306,7 @@ static NSString * const ks_UserDefaultsExpiryDateKey = @"ks_UserDefaultsExpiryDa
     
 }
 
-- (void)retrieveWorkoutWithId:(NSString *)workoutId completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock
+- (void)GETWorkoutWithId:(NSString *)workoutId completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock
 {
     NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"access_token"];
     if (!accessToken || !workoutId) {
@@ -348,5 +348,61 @@ static NSString * const ks_UserDefaultsExpiryDateKey = @"ks_UserDefaultsExpiryDa
     }];
 
 }
+
+- (void)POSTWorkoutWithData:(NSDictionary *)JSONData completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock
+{
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"access_token"];
+    if (!accessToken || !JSONData) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(NO, nil);
+        });
+        return;
+    }
+    
+    NSURL *baseURL = [NSURL URLWithString:ks_APIBaseURLString];
+    NSURL *url = [NSURL URLWithString:@"fitnessActivities" relativeToURL:baseURL];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    
+    NSDictionary *headerParameters = @{@"Accept" : @"application/json",
+                                       @"Authorization" : [NSString stringWithFormat:@"Bearer %@", accessToken]};
+    [request setAllHTTPHeaderFields:headerParameters];
+    
+    NSError *error = nil;
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:JSONData options:0 error:&error];
+    if (error) {
+        NSLog(@"Error serializing body parameters: %@", error.localizedDescription);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(NO, nil);
+        });
+        return;
+    }
+    [request setHTTPBody:postData];
+
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:self.operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"Connection error: %@", connectionError.localizedDescription);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBlock(NO, nil);
+            });
+            return;
+        }
+        NSError *error = nil;
+        NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        if (error) {
+            NSLog(@"Error reading JSONData: %@", error.localizedDescription);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBlock(NO, nil);
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBlock(YES, responseData);
+            });
+        }
+    }];
+    
+}
+
 
 @end

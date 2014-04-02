@@ -29,13 +29,19 @@
 
 @implementation SBBaseModelObject
 #pragma mark - KVO implementation
-+ (NSSet *)keyPathsForValuesAffectingUniqueId
+- (void)setDetailsURI:(NSString *)detailsURI
 {
-    return [NSSet setWithObject:@"detailsURI"];
+    _detailsURI = detailsURI;
+    [self willChangeValueForKey:@"uniqueId"];
+    _uniqueId = [_detailsURI lastPathComponent];
+    [self didChangeValueForKey:@"uniqueId"];
 }
 
 - (NSString *)uniqueId
 {
+    if (_uniqueId) {
+        return _uniqueId;
+    }
     return [self.detailsURI lastPathComponent];
 }
 
@@ -59,6 +65,11 @@
             [self setValue:value forKey:propertyKey];
         }
     }
+}
+
+- (NSDictionary *)JSONDataToPost
+{
+    return nil;
 }
 
 - (UIImage *)imageForActivityType:(NSString *)type

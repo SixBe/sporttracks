@@ -36,7 +36,11 @@
 
 - (void)retrieveAccessTokenWithCompletionBlock:(void(^)(BOOL succedeed))completionBlock;
 - (void)refreshAccessTokenWithCompletionBlock:(void(^)(BOOL succedeed))completionBlock;
-- (void)retrieveWorkoutHistoryWithCompletionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock;
-- (void)retrieveWorkoutWithId:(NSString *)workoutId completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock;
+
+- (void)GETWorkoutHistoryWithCompletionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock;
+
+- (void)GETWorkoutWithId:(NSString *)workoutId completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock;
+- (void)POSTWorkoutWithData:(NSDictionary *)JSONData completionBlock:(void(^)(BOOL succeded, NSDictionary *responseData))completionBlock;
+
 
 @end

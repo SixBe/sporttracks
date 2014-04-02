@@ -25,6 +25,8 @@
 // SOFTWARE.
 
 #import "SBWorkoutSummary.h"
+#import "SBWorkout.h"
+#import "NSDate+RFCAndISO.h"
 
 @implementation SBWorkoutSummary
 
@@ -44,4 +46,22 @@
     }
     return [__mapping objectForKey:JSONKey];
 }
+
+- (NSDictionary *)JSONDataToPost
+{
+    NSMutableDictionary *JSONData = [[NSMutableDictionary alloc] init];
+    NSArray *postKeys = @[@"start_time", @"type", @"name", @"notes", @"total_distance", @"duration"];
+    for (NSString *JSONkey in postKeys) {
+        NSString *propertyKey = [self mapJSONKeyToPropertyKey:JSONkey];
+        id value = [self valueForKey:propertyKey];
+        
+        if (value && [value isKindOfClass:[NSDate class]]) {
+            [JSONData setObject:[value iso8601String] forKey:JSONkey];
+        } else if (value) {
+            [JSONData setObject:value forKey:JSONkey];
+        }
+    }
+    return JSONData;
+}
+
 @end

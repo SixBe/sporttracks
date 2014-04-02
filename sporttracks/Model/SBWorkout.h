@@ -26,6 +26,7 @@
 
 #import "SBBaseModelObject.h"
 
+@class SBWorkoutSummary;
 @interface SBWorkout : SBBaseModelObject
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *name;
@@ -45,6 +46,8 @@
 @property (nonatomic, strong) NSArray *locations;
 @property (nonatomic, strong) NSArray *distances;
 @property (nonatomic, strong) NSArray *heartRates;
+
+@property (nonatomic, weak) SBWorkoutSummary *summary;
 
 - (NSArray *)displayProperties;
 @end

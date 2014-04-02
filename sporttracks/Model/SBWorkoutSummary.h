@@ -27,10 +27,12 @@
 #import <Foundation/Foundation.h>
 #import "SBBaseModelObject.h"
 
+@class SBWorkout;
 @interface SBWorkoutSummary : SBBaseModelObject
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *distance;
 @property (nonatomic, strong) NSNumber *duration;
-@property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) SBWorkout *workout;
 @end

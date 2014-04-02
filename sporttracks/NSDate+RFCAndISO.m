@@ -101,7 +101,7 @@ static NSDateFormatter *__rfc1123DateFormatter = nil;
         __rfc1123DateFormatter = [[NSDateFormatter alloc] init];
         __rfc1123DateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
         __rfc1123DateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-        __rfc1123DateFormatter.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss GMT";
+        __rfc1123DateFormatter.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss'Z'";
     });
 
     return [__rfc1123DateFormatter stringFromDate:self];

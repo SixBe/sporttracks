@@ -24,8 +24,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 #import "SBWorkout.h"
+#import "SBWorkoutSummary.h"
+#import "NSDate+RFCAndISO.h"
 
 @implementation SBWorkout
+
+- (void)dealloc
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
 #pragma mark - KVC implementation
 - (NSUInteger)countOfDistances
 {
@@ -85,6 +93,24 @@
         
     }
     return [__mapping objectForKey:JSONKey];
+}
+
+
+- (NSDictionary *)JSONDataToPost
+{
+    NSMutableDictionary *JSONData = [[NSMutableDictionary alloc] init];
+    NSArray *postKeys = @[@"start_time", @"type", @"name", @"notes", @"total_distance", @"duration"];
+    for (NSString *JSONkey in postKeys) {
+        NSString *propertyKey = [self mapJSONKeyToPropertyKey:JSONkey];
+        id value = [self valueForKey:propertyKey];
+        
+        if (value && [value isKindOfClass:[NSDate class]]) {
+            [JSONData setValue:[value iso8601String] forKey:JSONkey];
+        } else if (value) {
+            [JSONData setValue:value forKey:JSONkey];
+        }
+    }
+    return JSONData;
 }
 
 - (NSArray *)displayProperties

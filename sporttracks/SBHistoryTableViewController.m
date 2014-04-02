@@ -29,6 +29,8 @@
 #import "SBWorkoutTableViewController.h"
 #import "SBAPIManager.h"
 #import "SBWorkoutSummary.h"
+#import "SBWorkout.h"
+#import "NSDate+RFCAndISO.h"
 
 @interface SBHistoryTableViewController ()
 @property (nonatomic, strong) NSMutableArray *workouts;
@@ -47,6 +49,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +62,29 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self triggerRefresh];
+    NSDate *dateSinceLastRefresh = [[NSUserDefaults standardUserDefaults] valueForKey:@"dateSinceLastRefresh"];
+    if (!dateSinceLastRefresh || [dateSinceLastRefresh timeIntervalSinceNow] < -5 * 60) {
+        [self triggerRefresh];
+    }
+}
+
+#pragma mark - Actions
+- (void)addPressed:(id)sender
+{
+    SBWorkout *workout = [[SBWorkout alloc] init];
+    workout.startTime = [NSDate date];
+    workout.name = @"Skating";
+    workout.type = @"Skating";
+    workout.distance = @(12000); // 12 km
+    workout.duration = @(30. * 60.); // 30 minutes
+    workout.notes = @"Nice skating outdoors on icy river next to Dutch windmills... One can dream :-)";
+    
+    [[SBAPIManager sharedInstance] POSTWorkoutWithData:[workout JSONDataToPost] completionBlock:^(BOOL succeded, NSDictionary *responseData) {
+        if (!succeded) {
+            return;
+        }
+        [workout setupWithJSON:responseData];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -140,10 +165,19 @@
      if ([segue.identifier isEqualToString:@"showWorkout"]) {
          NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
          if (indexPath) {
-             NSString *workoutId = [[self.workouts objectAtIndex:indexPath.row] uniqueId];
+             SBWorkoutSummary *summary = [self.workouts objectAtIndex:indexPath.row];
+             NSString *workoutId = summary.uniqueId;
+             SBWorkout *workout = summary.workout;
              
+             if (workout == nil) {
+                 workout = [[SBWorkout alloc] init];
+                 workout.uniqueId = workoutId;
+                 workout.name = @"Download pending...";
+                 [summary setWorkout:workout];
+                 [workout setSummary:summary];
+             }
              SBWorkoutTableViewController *controller = (SBWorkoutTableViewController *)segue.destinationViewController;
-             [controller setWorkoutId:workoutId];
+             [controller setWorkout:workout];
              
          }
      }
@@ -151,11 +185,12 @@
 
 
 
-- (IBAction)triggerRefresh {
+- (void)triggerRefresh {
     [self.refreshControl beginRefreshing];
-    [[SBAPIManager sharedInstance] retrieveWorkoutHistoryWithCompletionBlock:^(BOOL succeded, NSDictionary *responseData) {
+    [[SBAPIManager sharedInstance] GETWorkoutHistoryWithCompletionBlock:^(BOOL succeded, NSDictionary *responseData) {
         if (!succeded) {
             NSLog(@"Error retrieving workout history...");
+            [self.refreshControl endRefreshing];
             return;
         }
         
@@ -169,6 +204,10 @@
                 [workouts addObject:workout];
             }];
             self.workouts = [workouts copy];
+            
+            [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"dateSinceLastRefresh"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
             [self.refreshControl endRefreshing];
             [self.tableView reloadData];
         }
