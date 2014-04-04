@@ -365,11 +365,12 @@ static NSString * const ks_UserDefaultsExpiryDateKey = @"ks_UserDefaultsExpiryDa
     [request setHTTPMethod:@"POST"];
     
     NSDictionary *headerParameters = @{@"Accept" : @"application/json",
+                                       @"Content-type" : @"application/json",
                                        @"Authorization" : [NSString stringWithFormat:@"Bearer %@", accessToken]};
     [request setAllHTTPHeaderFields:headerParameters];
     
     NSError *error = nil;
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:JSONData options:0 error:&error];
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:JSONData options:NSJSONWritingPrettyPrinted error:&error];
     if (error) {
         NSLog(@"Error serializing body parameters: %@", error.localizedDescription);
         dispatch_async(dispatch_get_main_queue(), ^{

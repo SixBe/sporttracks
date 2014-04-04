@@ -83,7 +83,8 @@
         if (!succeded) {
             return;
         }
-        [workout setupWithJSON:responseData];
+        NSArray *URIs = [responseData objectForKey:@"uris"];
+        [workout setValue:URIs.firstObject forKey:@"detailsURI"];
     }];
 }
 
@@ -155,10 +156,6 @@
 
 
 #pragma mark - Table view delegate
-
-
-
- 
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
